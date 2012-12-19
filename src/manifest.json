@@ -1,0 +1,14 @@
+{
+  "name": "AppleSystemStatus",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Display Apple System Status.",
+  "icons": {"128": "icon128.png"},
+  "browser_action": {
+    "default_icon": "icon48.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://www.apple.com/"
+  ]
+}
