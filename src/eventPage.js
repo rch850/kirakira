@@ -1,12 +1,18 @@
 console.debug("init start");
 
+var iplogs = [];
+
 chrome.webRequest.onCompleted.addListener(
     function(details) {
       if (details.ip) {
-        console.log(details.timeStamp + ": " + details.ip);
+        iplogs.push({
+          "timeStamp": details.timeStamp,
+          "ip": details.ip
+        });
       }
     }, {
       urls: ["<all_urls>"]
     });
 
 console.debug("init end");
+
