@@ -2,10 +2,20 @@
 <head>
   <style>
     body { width: 600px; height: 400px; }
+    #map-canvas {
+      height: 100%;
+    }
   </style>
   <script src="zepto.min.js"></script>
   <script src="popup.js"></script>
+  <!--
+    Edit manifest.json to include google api script.
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://maps.gstatic.com https://*.googleapis.com; ...
+    Content Security Policy: https://developer.chrome.com/extensions/contentSecurityPolicy
+  -->
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 </head>
 <body>
   <h2>KiRa-KiRa</h2>
+  <div id="map-canvas"></div>
 </body>
